@@ -16,7 +16,7 @@ function Sidebar() {
                     <SignInButton />
                       </SignedOut>
                       <SignedIn>
-                    <UserButton />
+                    <UserButton className ="userimg" />
                   </SignedIn>
                   <h4>Profile</h4>
               </div>

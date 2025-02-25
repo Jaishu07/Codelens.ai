@@ -22,7 +22,7 @@ function Codereview() {
     setIsLoading(true);
     setReview('');
     try {
-      const response = await axios.post("https://ai-code-reviewer-backend-zeta.vercel.app", { code });
+      const response = await axios.post('https://ai-code-reviewer-backend-zeta.vercel.app/ai/get-review', { code });
       setReview(response.data);
        const count = setReviewcount(reviewcount + 1);
     } catch (error) {
