@@ -710,3 +710,34 @@ body {
     justify-content: center;
   }
 }
+
+
+.navviaction-bar{
+  display: flex;
+  justify-content: space-between;
+ 
+  padding: 30px;
+  /* background-color: #1f2937; */
+  color: white;
+  position: absolute;
+  top: -7%;
+  width: 100%;
+  z-index: 1000;
+}
+
+.user{
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1); /* Translucent white */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+ 
+}

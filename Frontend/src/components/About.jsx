@@ -49,7 +49,7 @@ function About() {
         <div className="dev-content">
           <h2>👨‍💻 About the Developer</h2>
           <p>
-            Hi, I'm <strong>Your Name</strong>, a passionate AI and software developer dedicated to building 
+            Hi, I'm <strong>Yashwant Sharma</strong>, a passionate software developer dedicated to building 
             tools that enhance productivity. This project was inspired by the need for smarter, AI-powered 
             code analysis.
           </p>

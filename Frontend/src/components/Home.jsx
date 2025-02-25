@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 
 function Home() {
   const navigate = useNavigate();
@@ -23,6 +24,20 @@ function Home() {
     <div className="home-container">
       {/* 🔔 Notification Bar */}
       <div className="notification-bar">🚀 AI Code Review is now powered by Gemini  AI!</div>
+      <div className=" navviaction-bar">
+        <h3>Codelens Ai</h3>
+      <header>
+        <div >
+            <SignedOut>
+              <SignInButton />
+                </SignedOut>
+                <SignedIn>
+              <UserButton />
+            </SignedIn>
+        </div>
+              
+         </header>
+      </div>
 
       {/* 🏠 Glassmorphic Main Section */}
       <div className="hero-section">
@@ -41,7 +56,7 @@ function Home() {
         </div>  ))}
      </div>
       
-
+      
      
     </div>
   );

@@ -12,6 +12,7 @@ function Codereview() {
   const [code, setCode] = useState(`console.log("Hello, world!");`);
   const [review, setReview] = useState(``);
   const [isLoading, setIsLoading] = useState(false);
+  const [reviewcount, setReviewcount] = useState(0);
 
   useEffect(() => {
     prism.highlightAll();
@@ -21,14 +22,17 @@ function Codereview() {
     setIsLoading(true);
     setReview('');
     try {
-      const response = await axios.post('http://localhost:3000/ai/get-review', { code });
+      const response = await axios.post("https://ai-code-reviewer-backend-zeta.vercel.app", { code });
       setReview(response.data);
+       const count = setReviewcount(reviewcount + 1);
     } catch (error) {
       console.error("Error reviewing code:", error);
       setReview("An error occurred while reviewing the code.");
     } finally {
       setIsLoading(false);
+
     }
+
   }
 
   return (
@@ -58,6 +62,7 @@ function Codereview() {
         </div>
         <div
           onClick={reviewCode}
+          
           className={`review ${isLoading ? 'loading' : ''}`}
         >
           {isLoading ? 'Loading...' : 'Review Code'}
